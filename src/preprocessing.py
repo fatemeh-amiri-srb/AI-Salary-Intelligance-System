@@ -1,15 +1,20 @@
-from sklearn.preprocessing import LabelEncoder
 import pandas as pd
 
-def encode_features(df: pd.DataFrame) -> pd.DataFrame:
-    """
-    Encode categorical variables
-    """
+def preprocess_tabular(df: pd.DataFrame):
+    df_model=df[[
+        "Rating",
 
-    categorical_cols = ["job_title", "company", "location"]
+        "Size",
 
-    for col in categorical_cols:
-        le = LabelEncoder()
-        df[col] = le.fit_transform(df[col])
+        "Type of ownership",
 
-    return df
+        "Industry",
+
+        "Sector",
+
+        "Revenue",
+
+        "Location"        
+    ]].copy()
+
+    return df_model
