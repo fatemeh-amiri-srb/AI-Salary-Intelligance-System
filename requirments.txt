@@ -2,8 +2,7 @@ pandas
 numpy
 scikit-learn
 xgboost
-fastapi
-uvicorn
+scipy
 streamlit
 joblib
 matplotlib
