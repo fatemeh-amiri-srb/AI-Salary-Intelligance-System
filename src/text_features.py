@@ -7,7 +7,7 @@ class TextFeatureExtractor:
             max_features=max_features,
             stop_words="english"
         )
-    def fi(self,df: pd.DataFrame):
+    def fit(self,df: pd.DataFrame):
         self.vectorizer.fit(df["Job Description"])
         return self
     def transform(self,df: pd.DataFrame):
