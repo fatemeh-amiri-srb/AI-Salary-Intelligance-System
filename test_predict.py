@@ -1,6 +1,6 @@
 from src.predict import SalaryPredictor
 
-predictor=SalaryPredictor
+predictor=SalaryPredictor()
 
 job={
     "Rating": 4.2,
