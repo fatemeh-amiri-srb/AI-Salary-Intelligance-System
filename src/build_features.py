@@ -21,3 +21,10 @@ def build_features(df):
     X_final = hstack([X_cat, X_text])
 
     return X_final, cat_encoder, text_extractor
+
+def build_prediction_feature(df,encoder,text_extractor):
+    X_tabular=preprocess_tabular(df)
+    X_cat=encoder.transform(X_tabular)
+    X_text=text_extractor.transform(df)
+    X=hstack([X_cat,X_text])
+    return X
